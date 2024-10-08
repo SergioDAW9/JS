@@ -1,0 +1,42 @@
+alert("") -> Alerta en panel
+console.warn(""); -> Aviso
+console.error(""); -> Error
+console.log("); -> Uso por defecto
+console.log(producto.length); //Longitud
+console.time("USD"); / console.timeEnd("USD"); -> Uso del tiempo
+var nombreVar="titulo"; //Variable var
+let nombrevar //Variable de alcanze
+const nombrevar //Variable constante
+console.log("variable".indexOf('nombreX')); //Devuelve la primera posicion de la cadena, si es inexistente devuelve -1
+console.log("variable".includes('nombreX')); //Si es inexistente manda true/false
+
+/*CONCATENAR*/
+var nombreVar=variable1.concat(variable2); // Uso de dos variables 
+nombreVar=variable1.concat('20% de decuento'); //Uso de variable unido a txt
+console.log(`Su nombre es ${variable1} y su edad de ${variable2} años.`); //Version moderna de ecmacscript 6
+
+console.log(variable1.trim().length); //Elimina los espacios en blanco al conteo
+var nuevoNombre=variable1.replace('Origen', 'Cambio'); //Remplaza palabras por otras
+charCadena=variable1.charAt(0); //Extraer un caracter unico
+const variableX=' texto'.repeat(3); // Repeticiones de cadena 
+const nombreCadena1=`${variableY}${variableX}texto`; // Repeticiones concatenando
+const nombreCadena=variable1.split("X"); //Separar por "X"
+var cadenaMax = producto.toUpperCase(); // Pasar a mayuscula
+var CadenaMin = producto.toLowerCase(); // Pasar a minuscula
+
+/*NUMEROS Y OPERACIONES*/
+Uso de "var" , "let" y "const" validos para numeros
+let=viariable1
+variable1=numero1+numero2; //Operaciones (+ , - , * , % , /)
+resultado=Math.round(Nº1.Nº2); // Redondeo clasico de resultados
+resultado=Math.ceil(Nº1.Nº2); / resultado=Math.floor(N1.N2); // Funcion suelo y funcion techo
+resultado=Math.sqrt(Nº); // Raiz cuadrada
+resultado=Math.abs(Nº); //Valor entero
+resultado=Math.pow(Nº1,Nº2); // Potencia
+resultado=Math.min(Nº1,Nº2,Nº3); // Minimo de valores
+resultado=Math.max(Nº1,Nº2,Nº3); // Maximo de valores
+resultado=Math.random(); // Numero aleatorio
+resultado=Math.floor(Math.random()*Nº); // Valor entero comprendido entre 0 - Nº
+
+
+
