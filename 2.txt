@@ -1,0 +1,30 @@
+package dao;
+
+import java.sql.SQLException;
+import java.time.format.DateTimeFormatter;
+import entidadaes.Autor;
+import java.sql.PreparedStatement;
+import java.sql.Connection;
+
+public class DaoAutor {
+	
+	private Connection conexion;
+	
+	public DaoAutor(Connection conexion) {
+		this.conexion = conexion;
+	}
+	
+	// Formato de fecha(LocalDateTime)
+	private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+	
+	// Dar de alta un nuevo autor
+	public void altaautor(Autor autor) throws SQLException {
+		String sql = "INSERT INTO autores (nombre, fechanacimiento) VALUES (?, ?)";
+		
+		try (PreparedStatement stmt = conexion.prepareStatement(sql)) {
+			stmt.setString(1, autor.getNombre());
+			stmt.setString(2, autor.getFechanacimiento().format(FORMATO_FECHA));
+			stmt.executeUpdate();
+		}
+	}
+}
